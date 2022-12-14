@@ -34,21 +34,21 @@ header:
     enable: true
     align: l
     show_logo: true
-    show_language: false
+    show_language: true
     show_day_night: true
     show_search: true
     highlight_active_link: true
 
 # Site footer
 
-footer:
-  copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
-    license:
-      enable: true
-      allow_derivatives: false
-      share_alike: true
-      allow_commercial: false
+# footer:
+#   copyright:
+#     notice: '© {year} Me. This work is licensed under {license}'
+#     license:
+#       enable: true
+#       allow_derivatives: false
+#       share_alike: true
+#       allow_commercial: false
 
 # Localization
 
@@ -61,8 +61,8 @@ locale:
 
 features:
   syntax_highlighter:
-    theme_light: github-light
-    theme_dark: dracula
+    theme_light: xcode-light
+    theme_dark: xcode-dark
   math:
     enable: false
   privacy_pack:
@@ -87,16 +87,25 @@ features:
       category: ''
       category_id: ''
   search:
-    provider: wowchemy
-    algolia:
-      app_id: ''
-      api_key: ''
-      index_name: ''
-      show_logo: false
-  map:
-    provider: ''
-    api_key: ''
-    zoom: 15
+    provider: docsearch
+    # docsearch:
+    #   app_id: 'PASTE ID' //PASTE ID
+    #   api_key: 'PASTE KEY' //PASTE KEY
+    #   index_name: 'PASTE INDEX NAME' //PASTE INDEX NAME
+  # search:
+  #   provider: wowchemy
+  #   wowchemy:
+  #     min_length: 1  # Only the matches whose length exceeds this value will be returned.
+  #     threshold: 0.3  # Where 0 requires a perfect match and 1 matches anything.    
+  #   algolia:
+  #     app_id: ''
+  #     api_key: ''
+  #     index_name: ''
+  #     show_logo: false
+  # map:
+  #   provider: ''
+  #   api_key: ''
+  #   zoom: 15
 
 # Extensions
 
