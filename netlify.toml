@@ -1,5 +1,6 @@
 [build]
-  command = "hugo"
+  command = "hugo --gc --minify -b $URL"
+  functions = "netlify/functions"
   publish = "public"
 
 [build.environment]
