@@ -1,10 +1,10 @@
 ---
 # Display name
-title: Kaia-sec
+title: Kaia
 
 # Full name (for SEO)
-# first_name: gggxxx
-# last_name: kkk
+# first_name: 
+# last_name: 
 
 # Status emoji
 status:
@@ -19,7 +19,7 @@ role: Security Development Lifecycle (SDL)
 # Organizations/Affiliations to show in About widget
 # organizations:
 #   - name: 超链接...
-#     url: https://kaiasec.tk
+#     url: https://baidu.com
 
 # Short bio (displayed in user profile at end of posts)
 bio: ···
