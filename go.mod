@@ -10,7 +10,7 @@ require (
 )
 
 replace github.com/wowchemy/starter-hugo-academic => ./
-replace github.com/wowchemy/wowchemy-hugo-themes/modules/wowchemy-plugin-netlify => /wowchemy-hugo-themes/modules/wowchemy-plugin-netlify
-replace github.com/wowchemy/wowchemy-hugo-themes/modules/wowchemy-plugin-netlify-cms => /wowchemy-hugo-themes/modules/wowchemy-plugin-netlify-cms
-replace github.com/wowchemy/wowchemy-hugo-themes/modules/wowchemy-plugin-reveal => /wowchemy-hugo-themes/modules/wowchemy-plugin-reveal
-replace github.com/wowchemy/wowchemy-hugo-themes/modules/wowchemy/v5 => /wowchemy-hugo-themes/modules/wowchemy
+replace github.com/wowchemy/wowchemy-hugo-themes/modules/wowchemy-plugin-netlify => ./wowchemy-hugo-themes/modules/wowchemy-plugin-netlify
+replace github.com/wowchemy/wowchemy-hugo-themes/modules/wowchemy-plugin-netlify-cms => ./wowchemy-hugo-themes/modules/wowchemy-plugin-netlify-cms
+replace github.com/wowchemy/wowchemy-hugo-themes/modules/wowchemy-plugin-reveal => ./wowchemy-hugo-themes/modules/wowchemy-plugin-reveal
+replace github.com/wowchemy/wowchemy-hugo-themes/modules/wowchemy/v5 => ./wowchemy-hugo-themes/modules/wowchemy
