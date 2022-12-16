@@ -29,15 +29,15 @@ marketing:
 
 # Site header
 
-header:
-  navbar:
-    enable: true
-    align: l
-    show_logo: true
-    show_language: false
-    show_day_night: true
-    show_search: true
-    highlight_active_link: true
+# header:
+#   navbar:
+#     enable: true
+#     align: l
+#     show_logo: true
+#     show_language: false
+#     show_day_night: true
+#     show_search: true
+#     highlight_active_link: true
 
 # Site footer
 
@@ -60,9 +60,9 @@ locale:
 # Site features
 
 features:
-  syntax_highlighter:
-    theme_light: github-light
-    theme_dark: dracula
+  # syntax_highlighter:
+  #   theme_light: github-light
+  #   theme_dark: dracula
   math:
     enable: false
   privacy_pack:

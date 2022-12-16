@@ -5,12 +5,12 @@ authors: []
 tags: ['Tutorials']
 categories: []
 date: '2019-02-05'
-slides:
-  # Choose a theme from https://github.com/hakimel/reveal.js#theming
-  theme: black
-  # Choose a code highlighting style (see Hugo docs on Chroma)
-  #   Light style: github-light. Dark style: dracula (default).
-  highlight_style: dracula
+# slides:
+#   # Choose a theme from https://github.com/hakimel/reveal.js#theming
+#   theme: black
+#   # Choose a code highlighting style (see Hugo docs on Chroma)
+#   #   Light style: github-light. Dark style: dracula (default).
+#   highlight_style: dracula
 ---
 
 # Create slides in Markdown with Wowchemy

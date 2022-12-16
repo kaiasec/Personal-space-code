@@ -28,7 +28,7 @@
   {{- $theme := $.Param "slides.theme" | default "black" -}}
   <link rel="stylesheet" href="{{ $cdn_url_reveal }}/dist/theme/{{ $theme }}.min.css">
 
-  {{/* Hugo Chroma Syntax Highlighter Initialization */}}
+  <!-- {{/* Hugo Chroma Syntax Highlighter Initialization */}}
   {{ $hl_theme := $.Param "slides.highlight_style" | default "dracula" }}
   {{ $hl_theme_path := printf "css/libs/chroma/%s.css" $hl_theme }}
   {{ if not (fileExists (printf "assets/%s" $hl_theme_path)) }}
@@ -36,15 +36,15 @@
   {{ else }}
     {{ $hl_theme_css := resources.Get $hl_theme_path | minify }}
     <link rel="stylesheet" href="{{ $hl_theme_css.RelPermalink }}">
-  {{ end }}
+  {{ end }} -->
 
-  {{/* Load any Reveal CSS customizations */}}
+  <!-- {{/* Load any Reveal CSS customizations */}}
   {{ $custom_reveal_css := printf "css/reveal_custom.css" }}
   {{ if (fileExists (printf "assets/%s" $custom_reveal_css)) }}
     {{ $css_custom := resources.Get "css/reveal_custom.css" }}
     {{ $style := slice $css_custom | resources.Concat "css/reveal_custom.css" | resources.Minify }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
-  {{ end }}
+  {{ end }} -->
 </head>
 <body>
 

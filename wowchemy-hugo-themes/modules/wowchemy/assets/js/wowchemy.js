@@ -301,52 +301,52 @@ darkModeMediaQuery.addEventListener('change', (event) => {
 });
 
 // Code block copy button
-document.querySelectorAll('pre > code').forEach((codeblock) => {
-  const container = codeblock.parentNode.parentNode;
-  const copyBtn = document.createElement('button');
-  let classesToAdd = ['btn', 'btn-primary', 'btn-copy-code'];
-  copyBtn.classList.add(...classesToAdd);
-  copyBtn.innerHTML = i18n['copy'];
+// document.querySelectorAll('pre > code').forEach((codeblock) => {
+//   const container = codeblock.parentNode.parentNode;
+//   const copyBtn = document.createElement('button');
+//   let classesToAdd = ['btn', 'btn-primary', 'btn-copy-code'];
+//   copyBtn.classList.add(...classesToAdd);
+//   copyBtn.innerHTML = i18n['copy'];
 
-  function copiedNotification() {
-    copyBtn.innerHTML = i18n['copied'];
-    setTimeout(() => {
-      copyBtn.innerHTML = i18n['copy'];
-    }, 2000);
-  }
+//   function copiedNotification() {
+//     copyBtn.innerHTML = i18n['copied'];
+//     setTimeout(() => {
+//       copyBtn.innerHTML = i18n['copy'];
+//     }, 2000);
+//   }
 
-  copyBtn.addEventListener('click', () => {
-    console.debug('Code block copy click. Is secure context for Clipboard API? ' + window.isSecureContext);
-    if ('clipboard' in navigator) {
-      // Note: Clipboard API requires HTTPS or localhost
-      navigator.clipboard.writeText(codeblock.textContent);
-      copiedNotification();
-      return;
-    } else {
-      console.debug('Falling back to legacy clipboard copy');
-      const range = document.createRange();
-      range.selectNodeContents(codeblock);
-      const selection = window.getSelection();
-      selection.removeAllRanges();
-      selection.addRange(range);
-      try {
-        document.execCommand('copy');
-        copiedNotification();
-      } catch (e) {
-        console.error(e);
-      }
-      selection.removeRange(range);
-    }
-  });
+//   copyBtn.addEventListener('click', () => {
+//     console.debug('Code block copy click. Is secure context for Clipboard API? ' + window.isSecureContext);
+//     if ('clipboard' in navigator) {
+//       // Note: Clipboard API requires HTTPS or localhost
+//       navigator.clipboard.writeText(codeblock.textContent);
+//       copiedNotification();
+//       return;
+//     } else {
+//       console.debug('Falling back to legacy clipboard copy');
+//       const range = document.createRange();
+//       range.selectNodeContents(codeblock);
+//       const selection = window.getSelection();
+//       selection.removeAllRanges();
+//       selection.addRange(range);
+//       try {
+//         document.execCommand('copy');
+//         copiedNotification();
+//       } catch (e) {
+//         console.error(e);
+//       }
+//       selection.removeRange(range);
+//     }
+//   });
 
-  if (container.classList.contains('highlight')) {
-    // Parent when Hugo line numbers disabled
-    container.appendChild(copyBtn);
-  } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == 'TABLE') {
-    // Parent when Hugo line numbers enabled
-    codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copyBtn);
-  } else {
-    // Parent when Hugo `highlight` class not applied to code block
-    codeblock.parentNode.appendChild(copyBtn);
-  }
-});
+//   if (container.classList.contains('highlight')) {
+//     // Parent when Hugo line numbers disabled
+//     container.appendChild(copyBtn);
+//   } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == 'TABLE') {
+//     // Parent when Hugo line numbers enabled
+//     codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copyBtn);
+//   } else {
+//     // Parent when Hugo `highlight` class not applied to code block
+//     codeblock.parentNode.appendChild(copyBtn);
+//   }
+// });
