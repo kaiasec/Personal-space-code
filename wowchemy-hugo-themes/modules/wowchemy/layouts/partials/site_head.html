@@ -172,7 +172,7 @@
     <link rel="stylesheet" href="{{ $wc_block_styles.RelPermalink }}" />
   {{ end }}
 
-  {{/* Hugo Chroma Syntax Highlighter Initialization */}}
+  <!-- {{/* Hugo Chroma Syntax Highlighter Initialization */}}
   {{/* TODO: optimize to only include the Chroma CSS themes when the page has code blocks. */}}
   {{ $hl_theme_light := site.Params.features.syntax_highlighter.theme_light | default "github-light" }}
   {{ $hl_theme_dark := site.Params.features.syntax_highlighter.theme_dark | default "dracula" }}
@@ -185,7 +185,22 @@
     {{ $hl_theme_dark_css := resources.Get $hl_theme_dark_path | minify }}
     <link rel="stylesheet" href="{{ $hl_theme_light_css.RelPermalink }}" title="hl-light" media="print" onload="this.media='all'" {{ if ne ($scr.Get "light") true }}disabled{{end}}>
     <link rel="stylesheet" href="{{ $hl_theme_dark_css.RelPermalink }}" title="hl-dark" media="print" onload="this.media='all'" {{ if eq ($scr.Get "light") true }}disabled{{end}}>
+  {{ end }} -->
+
+  <!-- 自定义代码块 -->
+  {{ $hl_theme_light := site.Params.features.prismjs.theme_light | default "prism" }}
+  {{ $hl_theme_dark := site.Params.features.prismjs.theme_dark | default "prism" }}
+  {{ $hl_theme_light_path := printf "css/libs/prismjs/%s.css" $hl_theme_light }}
+  {{ $hl_theme_dark_path := printf "css/libs/prismjs/%s.css" $hl_theme_dark }}
+  {{ if not (fileExists (printf "assets/%s" $hl_theme_light_path)) | or (not (fileExists (printf "assets/%s" $hl_theme_dark_path))) }}
+  {{ else }}
+    {{ $hl_theme_light_css := resources.Get $hl_theme_light_path | minify }}
+    {{ $hl_theme_dark_css := resources.Get $hl_theme_dark_path | minify }}
+    <link rel="stylesheet" href="{{ $hl_theme_light_css.RelPermalink }}" title="hl-light" media="print" onload="this.media='all'" {{ if ne ($scr.Get "light") true }}disabled{{end}}>
+    <link rel="stylesheet" href="{{ $hl_theme_dark_css.RelPermalink }}" title="hl-dark" media="print" onload="this.media='all'" {{ if eq ($scr.Get "light") true }}disabled{{end}}>
   {{ end }}
+
+
 
   {{/* Load SEO module */}}
   {{ partial "wowchemy_seo" . }}

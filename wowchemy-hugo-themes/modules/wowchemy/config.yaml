@@ -7,13 +7,13 @@ markup:
       attribute:
         block: true
         title: true
-  highlight:
-    linenos: true
-    codeFences: true
-    noHl: false
-    lineNumbersInTable: true
-    noClasses: false
-    guessSyntax: true
+  # highlight:
+  #   linenos: true
+  #   codeFences: true
+  #   noHl: false
+  #   lineNumbersInTable: true
+  #   noClasses: false
+  #   guessSyntax: true
   tableOfContents:
     startLevel: 2
     endLevel: 3

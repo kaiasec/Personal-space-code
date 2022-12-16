@@ -37,7 +37,7 @@ header:
     show_language: true
     show_day_night: true
     show_search: true
-    highlight_active_link: true
+    # highlight_active_link: true
 
 # Site footer
 
@@ -60,9 +60,12 @@ locale:
 # Site features
 
 features:
-  syntax_highlighter:
-    theme_light: xcode-light
-    theme_dark: xcode-dark
+  # syntax_highlighter:
+  #   theme_light: xcode-light
+  #   theme_dark: xcode-dark
+  prismjs:
+    theme_light: prism
+    theme_dark: prism_Okaidia
   math:
     enable: false
   privacy_pack:

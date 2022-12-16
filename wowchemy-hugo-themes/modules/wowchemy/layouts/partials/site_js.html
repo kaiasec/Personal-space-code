@@ -148,6 +148,7 @@
       height: 100%;
     }
   </style>
+  <!-- 代码块相关 -->
   <script>
     window.markmap = {
       autoLoader: {
@@ -237,3 +238,17 @@
   {{ partial "custom_js" . }}
 {{ end }}
 {{ partial "functions/get_hook" (dict "hook" "body-end" "context" .) }}
+
+
+<!-- 自定义代码块 -->
+{{ $hl_theme_light := site.Params.features.prismjs.theme_light | default "prism" }}
+{{ $hl_theme_dark := site.Params.features.prismjs.theme_dark | default "prism" }}
+{{ $hl_theme_light_path := printf "css/libs/prismjs/%s.js" $hl_theme_light }}
+{{ $hl_theme_dark_path := printf "css/libs/prismjs/%s.js" $hl_theme_dark }}
+{{ if not (fileExists (printf "assets/%s" $hl_theme_light_path)) | or (not (fileExists (printf "assets/%s" $hl_theme_dark_path))) }}
+{{ else }}
+  {{ $hl_theme_light_js := resources.Get $hl_theme_light_path | minify }}
+  {{ $hl_theme_dark_js := resources.Get $hl_theme_dark_path | minify }}
+  <script src="{{ $hl_theme_light_js.RelPermalink }}"  title="hl-light" media="print" onload="this.media='all'" {{ if ne ($scr.Get "light") true }}disabled{{end}}></script>
+  <script src="{{ $hl_theme_dark_js.RelPermalink }}"  title="hl-light" media="print" onload="this.media='all'" {{ if ne ($scr.Get "light") true }}disabled{{end}}></script>
+{{ end }}
