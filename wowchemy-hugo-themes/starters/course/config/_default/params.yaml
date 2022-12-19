@@ -59,9 +59,9 @@ locale:
 # Site features
 
 features:
-  syntax_highlighter:
-    theme_light: github-light
-    theme_dark: dracula
+  # syntax_highlighter:
+  #   theme_light: github-light
+  #   theme_dark: dracula
   math:
     enable: false
   privacy_pack:

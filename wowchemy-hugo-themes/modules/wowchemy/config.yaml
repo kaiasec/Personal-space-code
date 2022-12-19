@@ -8,7 +8,7 @@ markup:
         block: true
         title: true
   highlight:
-    # linenos: true
+    linenos: false
     # codeFences: true
     # noHl: false
     # lineNumbersInTable: true
@@ -52,6 +52,6 @@ security:
       - ^WC_
 params:
   locale:
-    date_format: 'Jan 2, 2006'
+    date_format: 'Jan 1, 2022'
     time_format: '3:04 PM'
     address_format: en-us
