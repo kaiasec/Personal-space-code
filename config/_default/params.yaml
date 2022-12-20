@@ -94,7 +94,7 @@ features:
     docsearch:
       app_id: '12JXV28GBT' #PASTE ID
       api_key: '1b59de4a54e1a52431a4bf4fa8e2ecb2' #PASTE KEY
-      index_name: 'test' #PASTE INDEX NAME
+      index_name: 'test'  #PASTE INDEX NAME
   # search:
   #   provider: wowchemy
   #   wowchemy:
