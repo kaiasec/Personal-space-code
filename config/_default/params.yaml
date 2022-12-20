@@ -92,8 +92,8 @@ features:
   search:
     provider: docsearch
     docsearch:
-      app_id: 'Y6PCH0349X' #PASTE ID
-      api_key: '0ffb330167d736b01c0ccd307f65c25f' #PASTE KEY
+      app_id: '12JXV28GBT' #PASTE ID
+      api_key: '1b59de4a54e1a52431a4bf4fa8e2ecb2' #PASTE KEY
       index_name: 'test'  #PASTE INDEX NAME
   # search:
   #   provider: wowchemy
